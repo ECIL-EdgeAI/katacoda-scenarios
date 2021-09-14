@@ -1,0 +1,32 @@
+{
+  "pathwayTitle": "deploy-on-existing-k8s",
+  "title": "Sedna Deployment",
+  "description": "Deploying Sedna on an existing Kubernetes in one step",
+  "difficulty":	"Beginner",
+  "time":	"2 minutes",
+  "private": false,
+  "details": {
+    "steps": [
+      {
+        "title": "Install Sedna",
+        "text": "step1-install.md"
+      },
+      {
+        "title": "Clean Sedna",
+        "text": "step2-clean.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "showdashboard": false,
+    "hideintro": true,
+    "hidefinish": true,
+    "uilayout": "terminal"
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running:1.18"
+  }
+}

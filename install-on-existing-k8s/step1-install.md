@@ -2,7 +2,7 @@ For this scenario, Katacoda has just started a fresh Kubernetes cluster for you.
 
 Verify that it's ready for your use:
 ```
-lanuch.sh
+launch.sh
 kubectl version --short && \
 kubectl get nodes && \
 kubectl get componentstatus && \

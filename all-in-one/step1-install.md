@@ -12,7 +12,7 @@ It requires you:
 
 You can run:
   
-`curl https://raw.githubusercontent.com/llhuii/sedna/allinone-script/scripts/installation/minisedna.sh | NUM_EDGE_WORKERS=2 bash -
+`curl https://raw.githubusercontent.com/kubeedge/sedna/main/scripts/installation/all-in-one.sh | NUM_EDGE_NODES=2 bash -
 `{{execute}}
 
 To verify the k8s cluster has been created, you can run:

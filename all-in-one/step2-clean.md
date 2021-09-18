@@ -1,6 +1,6 @@
 To clean all-in-one sedna, you can run:
 ```
-curl https://raw.githubusercontent.com/llhuii/sedna/allinone-script/scripts/installation/minisedna.sh | bash /dev/stdin clean
+curl https://raw.githubusercontent.com/kubeedge/sedna/main/scripts/installation/all-in-one.sh | bash /dev/stdin clean
 ```{{execute}}
 
 To verify it has been uninstalled successfully, you can run:

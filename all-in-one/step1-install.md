@@ -33,7 +33,7 @@ And exit the master shell by:
 exit
 ```{{execute}}
 
-You also can enter into the edge nodes:
+You can also enter into the edge nodes:
 ```
 enter edge0
 docker ps
@@ -48,7 +48,6 @@ exit
 ```{{execute}}
 
 
-Check Sedna [examples](https://github.com/kubeedge/sedna/tree/main/examples).
+Check [All-In-One doc](https://github.com/kubeedge/sedna/blob/main/docs/setup/all-in-one.md) for more advanced options.
 
-TBD: Add more examples into katacoda courses.
-
+Check [this](https://www.katacoda.com/kubeedge-sedna) for more Sedna scenarios.

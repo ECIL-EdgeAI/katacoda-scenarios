@@ -10,12 +10,25 @@ It requires you:
 - Linux platform, such as ubuntu/centos
 - Docker 17.06+
 
-You can run:
+Check current OS release environment:
+  
+`lsb_release -a
+`{{execute}}
+
+Check Kubernetes environment:
+  
+`kubectl get node
+`{{execute}}
+
+You will see no kubectl command, and then no Kubernetes cluster.
+
+
+Then you can run the all-in-on script:
   
 `curl https://raw.githubusercontent.com/kubeedge/sedna/main/scripts/installation/all-in-one.sh | NUM_EDGE_NODES=2 bash -
 `{{execute}}
 
-To verify the k8s cluster has been created, you can run:
+To verify the Kubernetes cluster has been created, you can run:
 
 `kubectl get nodes`{{execute}}
   
@@ -47,7 +60,5 @@ And exit the shell by:
 exit
 ```{{execute}}
 
+You can check [the all-in-one doc](https://github.com/kubeedge/sedna/blob/main/docs/setup/all-in-one.md) for more advanced options.
 
-Check [All-In-One doc](https://github.com/kubeedge/sedna/blob/main/docs/setup/all-in-one.md) for more advanced options.
-
-Check [this](https://www.katacoda.com/kubeedge-sedna) for more Sedna scenarios.

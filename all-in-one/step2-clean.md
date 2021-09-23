@@ -12,3 +12,4 @@ The connection to the server localhost:8080 was refused - did you specify the ri
 ```
   
 
+Check [this](https://www.katacoda.com/kubeedge-sedna) for more Sedna scenarios.

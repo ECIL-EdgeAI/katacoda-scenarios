@@ -8,6 +8,9 @@ The joint inference service requires to detect the wearing of safety helmets in 
 
 ### Prepare Sedna
 
+This experiment shows two nodes. name of the edge node is `controlplane`, and name of the cloud node is `node01`.
+When two nodes show the message `Scenario ready. You have a running Sedna`, this means Sedna has been started.  
+
 Verify Sedna has been started, you can run:
 
 `kubectl get deployments,pods,services -n sedna`{{execute}}

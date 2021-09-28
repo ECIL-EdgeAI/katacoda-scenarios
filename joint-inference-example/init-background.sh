@@ -26,7 +26,8 @@ kubectl delete -f /opt/katacoda-cloud-provider.yaml &
 kubectl taint node $HOSTNAME node-role.kubernetes.io/master-
 
 # Install Sedna control components in one command, you can run:
-curl https://raw.githubusercontent.com/kubeedge/sedna/main/scripts/installation/install.sh | SEDNA_GM_NODE=$HOSTNAME SEDNA_ACTION=create bash -x /dev/stdin
+curl https://raw.githubusercontent.com/kubeedge/sedna/main/scripts/installation/install.sh | SEDNA_GM_NODE=$HOSTNAME SEDNA_ACTION=create bash -x /dev/stdin &
+
 kubectl -n sedna wait pod --for=condition=ready --selector=sedna
 
 echo "done" >> /opt/.backgroundfinished

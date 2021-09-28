@@ -18,6 +18,7 @@ Verify Sedna has been started, you can run:
 Optimally, the Pod status should say _Running_ in about ~15 seconds.
 
 For more details, see [the installation doc](https://github.com/kubeedge/sedna/blob/main/docs/setup/install.md).
+
 ### Prepare Data and Model
 
 Step1: download [little model](https://kubeedge.obs.cn-north-1.myhuaweicloud.com/examples/helmet-detection-inference/little-model.tar.gz) to your edge node.

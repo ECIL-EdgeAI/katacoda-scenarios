@@ -1,8 +1,8 @@
-This all-in-one [Sedna](https://github.com/kubeedge/sedna) environment installs components on two machines:
-- The cloud machine: a Kubernetes v1.21 cluster, with KubeEdge v1.8.0 CloudCore installed
-- The edge machine: two virutal edge nodes
+This all-in-one [Sedna](https://github.com/kubeedge/sedna) scenario installs components on two machines:
+- A machine named `cloud`: a Kubernetes v1.21 cluster, KubeEdge v1.8.0 CloudCore installed
+- A machine named `edge`: two virutal KubeEdge nodes
 
-It requires you two machines with below requirements:
+It requires you having two machines with below requirements:
 - 2 CPUs or more
 - 2GB free memory
 - 10GB of free disk space
@@ -23,7 +23,7 @@ Check Kubernetes environment:
 You will see no kubectl command, and then no Kubernetes cluster.
 
 
-Then you can run the all-in-on script:
+Then you can run the all-in-on script to install the cloud part components:
   
 `curl https://raw.githubusercontent.com/llhuii/sedna/allinone-script/scripts/installation/all-in-one.sh | NUM_EDGE_NODES=0 bash -
 `{{execute}}
@@ -45,20 +45,4 @@ And exit the master shell by:
 ```
 exit
 ```{{execute}}
-
-You can also enter into the edge nodes:
-```
-enter edge0
-docker ps
-
-# check edgecore logs
-# journalctl -u edgecore
-```{{execute}}
-
-And exit the shell by:
-```
-exit
-```{{execute}}
-
-You can check [the all-in-one doc](https://github.com/kubeedge/sedna/blob/main/docs/setup/all-in-one.md) for more advanced options.
 

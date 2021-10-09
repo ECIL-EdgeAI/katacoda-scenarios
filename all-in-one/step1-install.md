@@ -51,7 +51,10 @@ You can also enter into the edge nodes:
 enter edge0
 docker ps
 
-# check edgecore logs
+# see the edgecore status
+systemctl status edgecore
+
+# uncomment and check edgecore logs
 # journalctl -u edgecore
 ```{{execute}}
 

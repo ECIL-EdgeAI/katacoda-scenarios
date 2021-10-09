@@ -6,7 +6,7 @@ Check Kubernetes environment:
 You will see no kubectl command, and then no Kubernetes cluster.
 
 
-Then you can run the command to get join environments:
+Then you can run the command to get `join` variables, and copy it to clipboard:
   
 `curl https://raw.githubusercontent.com/llhuii/sedna/allinone-script/scripts/installation/all-in-one.sh | bash -s join-env
 `{{execute}}
@@ -15,7 +15,7 @@ Then run on the second machine to simulate two edge nodes:
 `curl -O https://raw.githubusercontent.com/llhuii/sedna/allinone-script/scripts/installation/all-in-one.sh
 `{{execute HOST2}}
 
-`bash all-in-one.sh join
+`<PASTE-the-variables-from-clipboard> bash all-in-one.sh join
 `{{execute HOST2}}
 
 `kubectl get nodes`{{execute}}
@@ -26,7 +26,10 @@ You can also enter into the edge nodes:
 enter edge0
 docker ps
 
-# check edgecore logs
+# see the edgecore status
+systemctl status edgecore
+
+# uncomment and check edgecore logs
 # journalctl -u edgecore
 ```{{execute HOST2}}
 

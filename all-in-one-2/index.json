@@ -1,8 +1,8 @@
 {
   "pathwayTitle": "all-in-one",
-  "title": "Sedna All-In-One Deployment",
-  "description": "Deploying Sedna along with Kubernetes and KubeEdge in one step in two nodes",
-  "difficulty":	"Beginner",
+  "title": "Sedna All-In-One Deployment in two nodes",
+  "description": "Deploying Sedna along with Kubernetes and KubeEdge in two nodes",
+  "difficulty":	"Intermediate",
   "time":	"10 minutes",
   "private": false,
   "details": {
@@ -13,7 +13,7 @@
         "code": "clear.sh"
       },
       {
-        "title": "Install multi edge nodes on a machine",
+        "title": "Install multi KubeEdge nodes on a machine",
         "text": "step2-edge-install.md",
         "code": "clear.sh"
       },
@@ -43,6 +43,7 @@
     "comment": "use nodejs:12 for large memory",
     "imageid": "nodejs:12",
     "imageid": "ubuntu:2004",
+    "imageid": "kubernetes-cluster:1.18",
     "p": "1"
   }
 }

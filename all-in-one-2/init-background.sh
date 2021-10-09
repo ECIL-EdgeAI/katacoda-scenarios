@@ -32,4 +32,6 @@ EOF
 
 source ~/.bashrc
 
+rm ~/go/bin/kind
+
 echo "done" >> /opt/.backgroundfinished

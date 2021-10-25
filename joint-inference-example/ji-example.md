@@ -84,9 +84,11 @@ Create joint inference service
 ```
 CLOUD_NODE="node01"
 EDGE_NODE=$HOSTNAME
-
+EDGE_IMAGE=jimmyyang20/sedna-example-joint-inference-helmet-detection-little:v0.1.2
+CLOUD_IMAGE=jimmyyang20/sedna-example-joint-inference-helmet-detection-big:v0.1.2
 
 kubectl create -f - <<EOF
+
 apiVersion: sedna.io/v1alpha1
 kind: JointInferenceService
 metadata:
@@ -107,7 +109,7 @@ spec:
       spec:
         nodeName: $EDGE_NODE
         containers:
-        - image: kubeedge/sedna-example-joint-inference-helmet-detection-little:v0.3.1
+        - image: $EDGE_IMAGE
           imagePullPolicy: IfNotPresent
           name:  little-model
           env:  # user defined environments
@@ -144,7 +146,7 @@ spec:
       spec:
         nodeName: $CLOUD_NODE
         containers:
-          - image: kubeedge/sedna-example-joint-inference-helmet-detection-big:v0.3.1
+          - image: $CLOUD_IMAGE
             name:  big-model
             imagePullPolicy: IfNotPresent
             env:  # user defined environments

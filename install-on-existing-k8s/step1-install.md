@@ -13,7 +13,7 @@ It should list a 2-node cluster and the control plane components should be repor
 
 Install Sedna control components in one command, you can run:
   
-`curl https://raw.githubusercontent.com/kubeedge/sedna/main/scripts/installation/install.sh | SEDNA_GM_NODE=node01 SEDNA_ACTION=create bash -`{{execute}}
+`curl https://raw.githubusercontent.com/kubeedge/sedna/main/scripts/installation/install.sh | SEDNA_ACTION=create bash -`{{execute}}
 
 Verify Sedna has been started, you can run:
   

@@ -8,6 +8,9 @@ The joint inference service requires to detect the wearing of safety helmets in 
 
 ### Prepare Sedna
 
+This experiment shows two nodes. name of the edge node is `controlplane`, and name of the cloud node is `node01`.
+When two nodes show the message `Scenario ready. You have a running Sedna`, this means Sedna has been started.  
+
 Verify Sedna has been started, you can run:
 
 `kubectl get deployments,pods,services -n sedna`{{execute}}
@@ -81,9 +84,11 @@ Create joint inference service
 ```
 CLOUD_NODE="node01"
 EDGE_NODE=$HOSTNAME
-
+EDGE_IMAGE=jimmyyang20/sedna-example-joint-inference-helmet-detection-little:v0.1.2
+CLOUD_IMAGE=jimmyyang20/sedna-example-joint-inference-helmet-detection-big:v0.1.2
 
 kubectl create -f - <<EOF
+
 apiVersion: sedna.io/v1alpha1
 kind: JointInferenceService
 metadata:
@@ -104,7 +109,7 @@ spec:
       spec:
         nodeName: $EDGE_NODE
         containers:
-        - image: kubeedge/sedna-example-joint-inference-helmet-detection-little:v0.3.1
+        - image: $EDGE_IMAGE
           imagePullPolicy: IfNotPresent
           name:  little-model
           env:  # user defined environments
@@ -141,7 +146,7 @@ spec:
       spec:
         nodeName: $CLOUD_NODE
         containers:
-          - image: kubeedge/sedna-example-joint-inference-helmet-detection-big:v0.3.1
+          - image: $CLOUD_IMAGE
             name:  big-model
             imagePullPolicy: IfNotPresent
             env:  # user defined environments

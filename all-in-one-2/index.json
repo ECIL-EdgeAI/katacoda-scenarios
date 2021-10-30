@@ -1,20 +1,25 @@
 {
   "pathwayTitle": "all-in-one",
-  "title": "Sedna All-In-One Deployment",
-  "description": "Deploying Sedna along with Kubernetes and KubeEdge in one step in one node",
-  "difficulty":	"Beginner",
+  "title": "Sedna All-In-One Deployment in two nodes",
+  "description": "Deploying Sedna along with Kubernetes and KubeEdge in two nodes",
+  "difficulty":	"Intermediate",
   "time":	"10 minutes",
   "private": false,
   "details": {
     "steps": [
       {
         "title": "Install All-In-One Sedna along with k8s/kubeedge",
-        "text": "step1-install.md",
+        "text": "step1-cloud-install.md",
+        "code": "clear.sh"
+      },
+      {
+        "title": "Install multi KubeEdge nodes on a machine",
+        "text": "step2-edge-install.md",
         "code": "clear.sh"
       },
       {
         "title": "Clean All-In-One Sedna",
-        "text": "step2-clean.md",
+        "text": "step3-clean.md",
         "code": "clear.sh"
       }
     ],
@@ -32,12 +37,13 @@
     "showdashboard": false,
     "hideintro": true,
     "hidefinish": true,
-    "uilayout": "terminal"
+    "uilayout": "terminal-terminal"
   },
   "backend": {
     "comment": "use nodejs:12 for large memory",
     "imageid": "nodejs:12",
     "imageid": "ubuntu:2004",
+    "imageid": "kubernetes-cluster:1.18",
     "p": "1"
   }
 }

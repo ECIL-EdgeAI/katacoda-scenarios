@@ -1,4 +1,4 @@
-The all-in-one [Sedna](https://github.com/kubeedge/sedna) environment installs:
+The all-in-one [Kubeedge](https://github.com/kubeedge/kubeedge) environment installs:
 - A Kubernetes v1.21 cluster
 - KubeEdge v1.8 with two edge nodes
 
@@ -25,15 +25,16 @@ You will see no kubectl command, and then no Kubernetes cluster.
 
 Then you can run the all-in-on script:
   
-`curl https://raw.githubusercontent.com/kubeedge/sedna/main/scripts/installation/all-in-one.sh | NUM_EDGE_NODES=2 bash -
-`{{execute}}
+```
+curl https://raw.githubusercontent.com/kubeedge/sedna/main/scripts/installation/all-in-one.sh |
+# comment sedna installation for kubeedge POC
+NUM_EDGE_NODES=3 NO_INSTALL_SEDNA=y bash -
+```{{execute}}
 
 To verify the Kubernetes cluster has been created, you can run:
 
 `kubectl get nodes`{{execute}}
   
-And check Sedna's control components, you can run:
-`kubectl get deployments,pods,services -n sedna`{{execute}}
 
 You can enter k8s master node to debug it:
 ```

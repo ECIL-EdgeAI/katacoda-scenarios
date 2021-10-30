@@ -28,7 +28,7 @@ Then you can run the all-in-on script:
 ```
 curl https://raw.githubusercontent.com/kubeedge/sedna/main/scripts/installation/all-in-one.sh |
 # comment sedna installation for kubeedge POC
-NUM_EDGE_NODES=2 NO_INSTALL_SEDNA=y bash -
+NUM_EDGE_NODES=3 NO_INSTALL_SEDNA=y bash -
 ```{{execute}}
 
 To verify the Kubernetes cluster has been created, you can run:
